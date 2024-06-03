@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <h1>Edit Actress: <%= foundActress.name %></h1>
+    <form action="/actresses/<%= foundActress._id %>?_method=PUT" method="POST">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" value="<%= foundActress.name %>">
+        <label for="birthplace">Birth place: </label>
+        <input type="text" name="birthplace" id="birthplace" value="<%= foundActress.birthplace %>">
+        <label for="isWinner">Oscar Winner? </label>
+        <input type="checkbox" name="isWinner" <% if (foundActress.isWinner) { %>
+         checked
+        <% } %>>
+        <button type="submit">Edit Actress Info</button>
+
+    </form>
+</body>
+
+</html>

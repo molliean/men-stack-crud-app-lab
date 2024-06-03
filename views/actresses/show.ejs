@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= actressDoc.name %>
+    </title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="/actresses">All Actresses</a>
+    </header>
+    <h1>
+        <%= actressDoc.name %>
+    </h1>
+    <p>
+        Birthplace: <%= actressDoc.birthplace %>
+    </p>
+    <% if (actressDoc.isWinner) { %>
+        <p>This actress is an Oscar winner!</p>
+        <% } else { %>
+            <p>This actress has not won an Oscar. Unfair!</p>
+            <% } %>
+                <a href="/actresses/<%= actressDoc._id %>/edit">Edit Actress Info</a>
+                <br><br>
+                <form action="/actresses/<%= actressDoc._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete actress</button>
+                </form> <br>
+                <a href="/actresses">Back to Actress Database</a>
+
+</body>
+
+</html>
