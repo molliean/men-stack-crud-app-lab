@@ -17,7 +17,7 @@ mongoose.connection.on('connected', function(){
 })
 
 //====Middleware
-app.use(express.urlencoded({extended: false})); // parses form request to give us req.body
+app.use(express.urlencoded({extended: false})); 
 app.use(morgan('dev'))
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, "public")))

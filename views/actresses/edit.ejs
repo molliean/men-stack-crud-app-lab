@@ -12,13 +12,14 @@
     <h1>Edit Actress: <%= foundActress.name %></h1>
     <form action="/actresses/<%= foundActress._id %>?_method=PUT" method="POST">
         <label for="name">Name: </label>
-        <input type="text" name="name" id="name" value="<%= foundActress.name %>">
+        <input type="text" name="name" id="name" value="<%= foundActress.name %>"><br>
         <label for="birthplace">Birth place: </label>
-        <input type="text" name="birthplace" id="birthplace" value="<%= foundActress.birthplace %>">
+        <input type="text" name="birthplace" id="birthplace" value="<%= foundActress.birthplace %>"><br>
         <label for="isWinner">Oscar Winner? </label>
         <input type="checkbox" name="isWinner" <% if (foundActress.isWinner) { %>
          checked
         <% } %>>
+        <br>
         <button type="submit">Edit Actress Info</button>
 
     </form>
