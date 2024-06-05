@@ -13,6 +13,10 @@ h1 {
     font-size: 2em;
 }
 
+h2 {
+  margin-bottom: 50px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -40,11 +44,11 @@ form {
     line-height: 40px;
   }
 
-  p {
+  /* p {
     margin-bottom: 50px;
-  }
+  } */
 
-  .enter {
+  .bottom-buttons {
     border: 1px solid black;
     border-radius: 20px;
     padding: 20px;

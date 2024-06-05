@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actresses</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
+
 <body>
     <h1>Actress Database</h1>
-    <img 
-        class="baby-jane"
-        src="https://images.bauerhosting.com/legacy/empire-tmdb/films/10242/images/bjDmIeNj9g42sXfuE6AxePjraZO.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80" 
-        alt="still from the film 'Whatever Happened to Baby Jane'">  
-        <p>A database of Hollywood's greatest actresses</p>
-    <a href="/actresses" class="enter">Enter here</a>
+    <p>A database of Hollywood's greatest actresses</p>
+    <img class="baby-jane"
+        src="https://images.bauerhosting.com/legacy/empire-tmdb/films/10242/images/bjDmIeNj9g42sXfuE6AxePjraZO.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80"
+        alt="still from the film 'Whatever Happened to Baby Jane'">
+    <% if (user) { %>
+        <h2>Welcome, <%= user.username %>!</h1>
+          <a href="/actresses" class="bottom-buttons">Enter</a>
+          <a href="/auth/sign-out" class="bottom-buttons">Sign out</a>
+          <% } else { %>
+        <h2>Welcome, guest.</h1>
+        <p>
+          <a href="/auth/sign-up" class="bottom-buttons">Create an account</a> <a href="/auth/sign-in" class="bottom-buttons">Log In</a>
+        </p>
+        <% } %>
 </body>
+
 </html>
